@@ -8,10 +8,10 @@ kafka: Kafka
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.kafka](https://galaxy.ansible.com/devops-toolbox.kafka)
+[https://galaxy.ansible.com/devopstoolbox.kafka](https://galaxy.ansible.com/devopstoolbox.kafka)
 
 ```bash
-ansible-galaxy install devops-toolbox.kafka
+ansible-galaxy install devopstoolbox.kafka
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: kafka is configured
       import_role:
-        name: devops-toolbox.kafka
+        name: devopstoolbox.kafka
       vars:
         kafka_packages_state: present
         kafka_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
