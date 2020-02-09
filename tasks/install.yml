@@ -1,0 +1,27 @@
+---
+# Install kafka packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ kafka_packages_remove }}"
+    state: absent
+  become: true
+  when: kafka_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ kafka_packages_repos }}"
+    state: "{{ kafka_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ kafka_packages_prereq }}"
+    state: "{{ kafka_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ kafka_packages_install }}"
+    state: "{{ kafka_packages_state }}"
+  become: true

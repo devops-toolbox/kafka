@@ -1,0 +1,10 @@
+---
+# Template configuration files for kafka
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ kafka_templates_copy }}"
+  when: kafka_copy_templates
